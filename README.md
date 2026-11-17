@@ -14,6 +14,15 @@
 |---|---|
 | `梨花下载器.exe` | Windows 电脑版，日常双击启动 |
 
+Windows 压缩包可从 [GitHub Releases](https://github.com/Furude-rika-mipa/rika-downloader/releases) 下载：
+
+| 压缩包 | 区别 |
+|---|---|
+| `Rika-Downloader-v0.1.0-Windows-x64-Complete.zip` | **完整版**，约 75.5 MiB，已包含运行组件，首次启动无需下载组件。 |
+| `Rika-Downloader-v0.1.0-Windows-x64.zip` | **普通版**，约 145 KiB，不包含运行组件，首次启动时需要联网下载。 |
+
+两个版本的功能相同。解压后双击 `梨花下载器.exe` 启动；下载在线视频时，两个版本都需要联网。
+
 ## Windows 版功能
 
 - Windows 桌面程序，有独立图标和原生控件，直接双击 EXE 打开。界面不使用浏览器或 WebView。
@@ -40,7 +49,7 @@
 
 - Windows 10 或 Windows 11，64 位。
 - 桌面程序使用 Windows 的 .NET Framework 运行时；构建源码时调用系统自带的 C# 编译器，无需安装开发环境。
-- 首次启动需要联网下载约 135 MB 运行组件。
+- 普通版首次启动需要联网下载约 135 MB 运行组件；完整版已包含这些组件。
 - 在中国大陆下载 YouTube 通常需要可用的网络代理；程序会检测常见 Clash 端口及 `HTTP_PROXY` / `HTTPS_PROXY`。
 
 无需安装 Node.js、FFmpeg、Python 或 npm 包。
@@ -200,7 +209,7 @@ THIRD_PARTY_NOTICES.md          第三方组件说明
 
 源码仓库不提交 `bin/` 和 `config.json`，克隆后由启动脚本自动重建运行环境。若要提供完全离线、双击即用的版本，请把运行组件放进单独的 GitHub Release ZIP，而不是提交到 Git 历史。
 
-Windows 压缩包可从 [GitHub Releases](https://github.com/Furude-rika-mipa/rika-downloader/releases) 下载。解压后双击 `梨花下载器.exe`；首次启动需要联网准备运行组件。
+Windows 压缩包的区别和下载入口见上面的「版本与文件」。
 
 ## 故障排查
 
