@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "梨花下载器 - 浏览器会话",
+  "version": "1.0.0",
+  "description": "将当前网站的登录状态加密保存到本机梨花下载器。",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoKikZFx25UrhxaidxIYO0OurYcnq/4DuLx3OQf603NGVY6pNLV91ijbw5CnA1+eVUzA/vvKaAO6uAbbTeTsvtoQY04zEyQcjL0XOAN1UD9xZKVD/pq36+UQHz4R4s8sb4yOjV7m/AiQMJ+aFQJVQk0V7BTi/OYB60S01shkVTVV3p4FOr7bSCKtgDwoFcz68M5gSVd0BFkzddZcHOu1ki8gSdKNKaKHRHdmGFcj5sCaZ+IB7onsUUtQTkLxdnJC/yEUZJgufK/bWrHIEwD6ITH7S3tI2ud3OqaZVXpXdhfIm70q8xBfovzzhUTMnA8De8UDBXrM7qFBVOJvuqzOKtQIDAQAB",
+  "permissions": [
+    "cookies",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "梨花下载器",
+    "default_popup": "popup.html"
+  }
+}
