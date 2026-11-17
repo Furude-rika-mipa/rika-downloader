@@ -53,6 +53,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-windows.ps
 
 ## 分享
 
-维护者先提交通过检查的代码，再运行 `scripts/package-source.ps1`，从 Git 提交生成源码 ZIP 和 SHA-256。它拒绝打包运行组件、个人配置、Cookie、数据库和媒体文件；接收者按固定清单准备运行组件。
+Windows 发布包包含桌面程序、源码和说明，不包含运行组件、个人配置、Cookie、数据库和媒体文件；首次启动时会准备运行组件。
 
 私有仓库需要访问权限，不能作为陌生人无需登录的公开地址。公开发布前应核对源码包内容与依赖许可；本地打包不会自动上传或修改仓库可见性。

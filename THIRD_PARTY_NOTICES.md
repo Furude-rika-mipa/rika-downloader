@@ -4,7 +4,7 @@
 
 ## 本次提供的下载包
 
-GitHub 源码和 `video-downloader-windows-x64.zip` 只包含本项目源码、启动脚本和说明，**不包含 Node.js、yt-dlp、FFmpeg 可执行文件**。第一次启动时，用户电脑根据 [固定清单](dependencies.windows.json) 从列明的上游地址下载组件，并验证 SHA-256。无需单独安装 npm 包。
+GitHub 源码和 Windows 发布包不包含 Node.js、yt-dlp、FFmpeg 可执行文件。Windows 发布包包含本项目的桌面程序、源码和说明；首次启动时，程序根据 [固定清单](dependencies.windows.json) 准备运行组件。无需单独安装 npm 包。
 
 | 组件 | 本项目固定版本 | 适用许可 | 用途 |
 | --- | --- | --- | --- |

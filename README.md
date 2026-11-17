@@ -188,7 +188,6 @@ scripts/download-history.js      下载记录的保存和恢复
 梨花下载器.exe                  电脑版启动入口
 scripts/bootstrap-windows.ps1   Windows 运行环境重建
 scripts/install-windows.ps1     人与 Agent 共用的安装、启动和就绪检查
-scripts/package-source.ps1      从干净 Git 提交生成源码包
 dependencies.windows.json       依赖版本、下载源和校验信息
 scripts/focus-explorer.cs       资源管理器置顶助手源码
 scripts/reveal-file.cs          在资源管理器中选中下载文件
@@ -201,7 +200,7 @@ THIRD_PARTY_NOTICES.md          第三方组件说明
 
 源码仓库不提交 `bin/` 和 `config.json`，克隆后由启动脚本自动重建运行环境。若要提供完全离线、双击即用的版本，请把运行组件放进单独的 GitHub Release ZIP，而不是提交到 Git 历史。
 
-如需制作源码发布包，可在提交并检查代码后运行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\package-source.ps1`。打包不会自动公开上传。
+Windows 压缩包可从 [GitHub Releases](https://github.com/Furude-rika-mipa/rika-downloader/releases) 下载。解压后双击 `梨花下载器.exe`；首次启动需要联网准备运行组件。
 
 ## 故障排查
 
