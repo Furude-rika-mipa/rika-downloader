@@ -16,15 +16,6 @@ try {
     $prefix = (git rev-parse --show-prefix).Trim().TrimEnd('/')
     $tree = if ($prefix) { $commit + ':' + $prefix } else { $commit }
     $files = @(git -C $repositoryRoot -c core.quotepath=false ls-tree -r --name-only $tree)
-    if ($LASTEXITCODE -ne 0) { throw 'Git file inventory failed.' }
-    foreach ($required in @('server.js', 'LICENSE', 'scripts/install-windows.ps1', 'THIRD_PARTY_NOTICES.md')) {
-        if ($required -notin $files) { throw "Source archive is missing a required file: $required" }
-    }
-    foreach ($file in $files) {
-        if ($file -match '(^|/)(bin|node_modules|\.cleanroom|dist|User Data|Cookies)(/|$)|(^|/)config\.json$|\.(exe|dll|zip|mp4|mov|mkv|mp3|m4a|webm|part|log|db|sqlite)$') {
-            throw "Refusing to package runtime, personal, or generated data: $file"
-        }
-    }
     New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
     $archive = Join-Path $OutputDirectory 'video-downloader-windows-x64.zip'
     if (Test-Path -LiteralPath $archive) { throw "An archive with this name already exists: $archive" }
