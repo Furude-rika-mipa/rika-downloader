@@ -167,7 +167,7 @@ node --check server.js
 
 ## 给本地 Agent
 
-让 Agent 先读取本目录中的 `AGENTS.md`，再按安装、隐私约束和验收步骤执行。不要复制别人的配置、Cookie、浏览器资料或运行目录。安装入口返回真实端口、构建、进程号与目录，避免把打开一个旧页面误认为安装成功。
+让 Agent 先读取本目录中的 `README.md` 和 `docs/INSTALL.md`，再按安装、隐私约束和验收步骤执行。不要复制别人的配置、Cookie、浏览器资料或运行目录。安装入口返回真实端口、构建、进程号与目录，避免把打开一个旧页面误认为安装成功。
 
 ## 项目结构
 
@@ -201,8 +201,7 @@ dependencies.windows.json       依赖版本、下载源和校验信息
 scripts/focus-explorer.cs       资源管理器置顶助手源码
 scripts/reveal-file.cs          在资源管理器中选中下载文件
 .github/                        可手动运行的项目检查配置
-AGENTS.md                       Agent 操作契约
-THIRD_PARTY_NOTICES.md          第三方组件说明
+docs/THIRD_PARTY_NOTICES.md     第三方组件说明
 ```
 
 ## 分发方式
@@ -226,7 +225,7 @@ Windows 压缩包的区别和下载入口见上面的「版本与文件」。
 
 ## 许可
 
-Node.js、yt-dlp、FFmpeg 等第三方组件遵循各自许可，详情见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+Node.js、yt-dlp、FFmpeg 等第三方组件遵循各自许可，详情见 [THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md)。
 
 默认源码包不包含第三方运行组件；若将已经下载的 `bin/` 一并转发，需要另行履行对应组件的许可及源码提供义务。
 
